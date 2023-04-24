@@ -1,0 +1,51 @@
+.container-fluid {
+    background-repeat: no-repeat;
+    background-image: url('https://wallpaperaccess.com/full/1363028.jpg');
+    background-size:1451px;
+    height: 596px;
+    margin-left: 12px;
+}
+
+input.ng-invalid.ng-touched {
+    border:none;
+    outline: none;
+    border-bottom: 2px solid red;
+}
+small {
+    color:red;
+}
+.card {
+    margin-top: 95px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    /* box-shadow: 0 5px 30px rgba(0, 0, 0, 0.641); */
+    /* background-color: transparent; */
+    background-color: rgba(0, 0, 0, 0.68);
+}
+
+input{
+    border:none;
+    border-bottom:3px solid white;
+    border-radius: 0px;
+    outline:none;
+    padding: 8px;
+    background-color: transparent;
+    color: white;
+}
+input:invalid {
+    color:red;
+    border-bottom: 2px solid red;
+}
+input::placeholder {
+    color: white;
+    caret-color: white;
+}
+button:hover{
+    background-color: white;
+    color: blue;
+}
+a {
+    text-decoration:none;
+}
+a:hover {
+    text-decoration: underline;
+}

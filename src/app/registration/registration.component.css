@@ -1,0 +1,79 @@
+.container-fluid {
+    background-repeat: no-repeat;
+    background-image: url('https://wallpaperaccess.com/full/1363028.jpg');
+    background-size:1451px;
+    height: 796px;
+    /* margin-left: 12px; */
+}
+
+input.ng-invalid.ng-touched {
+    border:none;
+    outline: none;
+    border-bottom: 2px solid red;
+}
+small {
+    color:red;
+    margin-left: 125px;
+}
+.card {
+    margin-top: 30px;
+    box-shadow: 0 5px 10px 0 rgba(0, 0, 0, 0.3), 0 7px 21px 0 rgba(0, 0, 0, 0.20);
+    /* box-shadow: 0 5px 30px rgba(0, 0, 0, 0.641); */
+    /* background-color: transparent; */
+    background-color: rgba(0, 0, 0, 0.68);
+}
+
+input {
+    border:none;
+    border-bottom:3px solid white;
+    border-radius: 0px;
+    outline:none;
+    padding: 6px;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+}
+input[type="number"], input[type="date"] {
+    width: 295px;
+}
+select {
+    border:none;
+    border-bottom:3px solid white;
+    border-radius: 0px;
+    outline:none;
+    padding: 6px;
+    background-color: transparent;
+    color: white;
+    font-size: 15px;
+    width: 295px;
+    margin-left: 42px;
+}
+#s {
+    margin-left: 68px;
+}
+#ci {
+    margin-left: 77px;
+}
+select option {
+    background-color: black;
+    color: white;
+}
+optgroup {
+    background-color: black;
+}
+input:invalid {
+    color:red;
+    border-bottom: 2px solid red;
+}
+input::placeholder {
+    color: white;
+    caret-color: white;
+}
+button[type="submit"]:hover{
+    background-color: white;
+    color: green;
+}
+button[type="reset"]:hover{
+    background-color: white;
+    color: red;
+}

@@ -1,0 +1,36 @@
+<div class="container-fluid">
+    <div class="row justify-content-center">
+        <div class="col-md-5">
+            <div class="card p-4">
+                <h1 class="text-center mb-4 text-white">Unlock Account</h1>
+            <form [formGroup]="UnlockAccount" (ngSubmit)="onSubmit()">
+                <div class="form-group">
+                    <label for="e" class=" mt-3 text-white"><h5>Email ID: </h5></label>
+                    <input type="email" name="email" style="margin-left: 143px;" formControlName="email" id="e" size="34" placeholder="Enter email address..." autocomplete="off" autofocus="on"><br>
+                    <small *ngIf="UnlockAccount.get('email')?.invalid && UnlockAccount.get('email')?.touched">Enter valid email address...</small>
+                </div>
+                <div class="form-group">
+                    <label for="p" class="mt-4 text-white"><h5>Temporary Password : </h5></label>
+                    <input type="password" name="tempPwd" style="margin-left: 24px;" size="34" formControlName="tempPwd" id="p" placeholder="Enter password...">
+                    <small *ngIf="UnlockAccount.get('tempPwd')?.invalid && UnlockAccount.get('tempPwd')?.touched">Enter Temporary Password...</small>
+                </div>
+                <div class="form-group">
+                    <label for="p" class="mt-4 text-white"><h5>Choose New Password : </h5></label>
+                    <input type="password" name="NewPassword" style="margin-left: 8px;" size="34" formControlName="newPwd" id="p" placeholder="Enter password...">
+                    <small *ngIf="UnlockAccount.get('newPwd')?.invalid && UnlockAccount.get('newPwd')?.touched">Enter New Password...</small>
+                </div>
+                <div class="form-group">
+                    <label for="p" class="mt-4 text-white"><h5>Confirm Password : </h5></label>
+                    <input type="password" name="ConfirmPassword" size="34" style="margin-left: 49px;" formControlName="confirmPwd" id="p" placeholder="Enter password...">
+                    <small *ngIf="UnlockAccount.get('confirmPwd')?.invalid && UnlockAccount.get('confirmPwd')?.touched">Enter Confirm Password...</small>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-md-5">
+                        <button type="submit" class="btn btn-primary border border-primary mt-4 mx-4 mb-3 px-5 rounded-5 fw-semibold" [disabled]="UnlockAccount.invalid">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </div>
+    </div>
+</div>
