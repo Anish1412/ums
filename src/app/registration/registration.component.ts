@@ -30,6 +30,10 @@ export class RegistrationComponent implements OnInit{
     data.reset();
   }
 
+  uniqueEmailCheck(){
+    this.reg.uniqueEmailCheck(this.register.value.email).subscribe((res)=>alert(res));
+  }
+
   countryId:any;
   getCountries(){
     this.reg.getCountries().subscribe((res)=>this.countryId = res);
@@ -39,7 +43,7 @@ export class RegistrationComponent implements OnInit{
   getStates(id:number){
     this.reg.getStates(id).subscribe((res)=>{
       this.stateId = res;
-      console.log(res);
+      // console.log(res);
     });
   }
 
@@ -47,7 +51,7 @@ export class RegistrationComponent implements OnInit{
   getCities(id:number){
     this.reg.getCities(id).subscribe((res)=>{
       this.cityId = res;
-      console.log(res);
+      // console.log(res);
     });
   }
 

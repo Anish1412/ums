@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { UmsService } from '../services/ums.service';
 
 @Component({
   selector: 'app-forgot-password',
@@ -11,7 +12,13 @@ export class ForgotPasswordComponent {
     email : new FormControl('',[Validators.required, Validators.email])
   })
 
+  constructor(private ums:UmsService) {}
+
   onSubmit(){
     console.log(this.ForgotPassword.value);
+  }
+
+  forgotPwd(){
+    this.ums.forgotPwd(this.ForgotPassword.value.email).subscribe((res)=>console.log(res));
   }
 }

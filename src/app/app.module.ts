@@ -10,6 +10,7 @@ import { ForgotPasswordComponent } from './forgot-password/forgot-password.compo
 import { HttpClientModule } from "@angular/common/http";
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HeaderComponent } from './header/header.component';
+import { HomeComponent } from './home/home.component';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { HeaderComponent } from './header/header.component';
     UnlockAccountComponent,
     ForgotPasswordComponent,
     HeaderComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,

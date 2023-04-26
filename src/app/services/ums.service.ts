@@ -12,7 +12,7 @@ export class UmsService {
 
   // Login
   login(body:any){
-    return this.ums.post(`${this.baseUrl}/login`,body);
+    return this.ums.post(`${this.baseUrl}/login`,body, { responseType:'text'});
   }
 
   // Registrtion
@@ -29,7 +29,7 @@ export class UmsService {
   }
 
   uniqueEmailCheck(email:string){
-    return this.ums.get(`${this.baseUrl}/emailcheck/${email}`);
+    return this.ums.get(`${this.baseUrl}/emailcheck/${email}`, { responseType:'text'});
   }
 
   saveUser(body:any){
@@ -38,11 +38,11 @@ export class UmsService {
 
   // UnlockAccount
   unlockUserAccount(body:any){
-    return this.ums.post(`${this.baseUrl}/unlock`,body);
+    return this.ums.post(`${this.baseUrl}/unlock`,body, { responseType:'text'});
   }
 
   // ForgotPassword
   forgotPwd(email:string){
-    return this.ums.get(`${this.baseUrl}/forgotPwd/${email}`);
+    return this.ums.get(`${this.baseUrl}/forgotPwd/${email}`,{responseType:'text'});
   }
 }

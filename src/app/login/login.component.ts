@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UmsService } from '../services/ums.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,14 @@ export class LoginComponent {
     "pwd" : new FormControl('',[Validators.required])
   })
 
+  constructor(private ums:UmsService, private route:Router){}
+
   onSubmit(){
     console.log(this.login.value);
+  }
+
+  loginAcc(){
+    this.ums.login(this.login.value).subscribe((res)=>console.log(res));
+    this.route.navigate(['home']);
   }
 }
