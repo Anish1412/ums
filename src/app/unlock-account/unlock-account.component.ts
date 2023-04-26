@@ -23,7 +23,14 @@ export class UnlockAccountComponent {
   }
 
   unlockUserAccount(){
-    this.ums.unlockUserAccount(this.UnlockAccount.value).subscribe((res)=>console.log(res));
-    this.route.navigate(['login']);
+    this.ums.unlockUserAccount(this.UnlockAccount.value).subscribe((res)=>{
+      if( res == 'Incorrect Temporary Password'){
+        alert(res+" or you have used this temporary password before!!");
+      }
+      else {
+        alert(res);
+        this.route.navigate(['login']);
+      }
+    });
   }
 }

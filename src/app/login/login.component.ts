@@ -21,7 +21,14 @@ export class LoginComponent {
   }
 
   loginAcc(){
-    this.ums.login(this.login.value).subscribe((res)=>console.log(res));
-    this.route.navigate(['home']);
+    this.ums.login(this.login.value).subscribe((res)=>{
+      console.log(res);
+      if(res == 'SUCCESS'){
+        this.route.navigate(['home']);
+      }
+      else {
+        alert(res);
+      }
+    });
   }
 }

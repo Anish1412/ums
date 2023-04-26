@@ -9,28 +9,41 @@ import { HomeComponent } from './home/home.component';
 const routes: Routes = [
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
   },
   {
     path: 'login',
-    component: LoginComponent
+    children: [
+      {
+        path: '',
+        component: LoginComponent,
+      },
+      {
+        path: 'ForgotPassword',
+        component: ForgotPasswordComponent,
+      },
+      {
+        path: 'registration',
+        component: RegistrationComponent,
+      },
+    ],
   },
   {
     path: 'registration',
-    component: RegistrationComponent
+    component: RegistrationComponent,
   },
   {
     path: 'UnlockAccount',
-    component: UnlockAccountComponent
+    component: UnlockAccountComponent,
   },
   {
     path: 'ForgotPassword',
-    component: ForgotPasswordComponent
-  }
+    component: ForgotPasswordComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}

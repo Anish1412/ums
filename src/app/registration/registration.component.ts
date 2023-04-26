@@ -31,7 +31,14 @@ export class RegistrationComponent implements OnInit{
   }
 
   uniqueEmailCheck(){
-    this.reg.uniqueEmailCheck(this.register.value.email).subscribe((res)=>alert(res));
+    this.reg.uniqueEmailCheck(this.register.value.email).subscribe((res)=>{
+      if(res == 'DUPLICATE'){
+        alert(res+' EMAILID!! EMAILID IS IN USE, TRY NEW EMAILID!!');
+      }
+      else {
+        alert('EmailID : '+res);
+      }
+    });
   }
 
   countryId:any;
@@ -57,7 +64,10 @@ export class RegistrationComponent implements OnInit{
 
   saveUser(){
     this.reg.saveUser(this.register.value).subscribe((res)=>{
-      console.log(res);
+      // console.log(res);
+      if(res == 'Please check your email for unlocking your account'){
+        alert(res);
+      }
     })
   }
 
